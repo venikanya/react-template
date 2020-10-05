@@ -1,0 +1,16 @@
+$bg--light: #F5F4F3;
+$bg--dark--top: #272b38;
+$bg--dark--bottom: #212631;
+$brand--blue--light: #4376A3;
+$bg--card--light: lighten($bg--light, 1%);
+$bg--card--dark: desaturate(lighten($bg--dark--top, 5%), 5%);
+$text--imp--light: #242D30;
+$text--imp--dark: #E8E4E0;
+$text--light: lighten($text--imp--light, 12%);
+$text--dark: #cac3bc;
+$text--2--light: $text--imp--light;
+$text--2--dark: $text--imp--dark;
+$hover--light: transparentize($brand--blue--light, .9);
+$border--light: darken($bg--card--light, 10%);
+$hover--dark: transparentize(#fff, .9);
+$border--dark: lighten($bg--card--dark, 10%);

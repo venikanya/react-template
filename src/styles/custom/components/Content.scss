@@ -1,0 +1,15 @@
+.container {
+  height: 100vh;
+  @include themed() {
+    color: t('text');
+    background: t('bg');
+  }
+  .header {
+    height: 30px;
+    padding: 10px;
+    .header-right {
+      float: right;
+      width: auto;
+    }
+  }
+}
