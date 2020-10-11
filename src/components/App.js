@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { hot } from 'react-hot-loader';
 import Toggle from './Toggle';
 
 const App = () => {
@@ -17,4 +16,4 @@ const App = () => {
   );
 };
 
-export default hot(module)(App);
+export default App;
