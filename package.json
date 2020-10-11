@@ -2,15 +2,34 @@
   "name": "ui-scaffolding",
   "version": "1.0.0",
   "description": "Scaffolding for building React JS apps",
-  "main": "index.js",
+  "engines": {
+    "node": ">=8.x"
+  },
+  "light": "dist/modern/index.html",
+  "heavy": "dist/legacy/index.html",
+  "targets": {
+    "light": {
+      "engines": {
+        "browsers": "> 0.5%"
+      },
+      "distDir": ".build/modern"
+    },
+    "heavy": {
+      "engines": {
+        "browsers": "ie 11"
+      },
+      "distDir": ".build/legacy"
+    }
+  },
+  "includeNodeModules": false,
+  "outputFormat": "global",
+  "isLibrary": false,
   "private": true,
-  "browserslist": [
-    "defaults"
-  ],
+  "browserslist": ["> 0.5%", "not ie 11"],
   "scripts": {
     "browsers": "npx browserslist",
-    "clean": "rm -rf dist",
-    "start": "parcel src/index.html",
+    "clean": "rm -rf .build",
+    "start": "parcel serve src/index.html",
     "build": "parcel build src/index.html",
     "test": "jest"
   },
